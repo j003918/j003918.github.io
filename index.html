@@ -13,6 +13,7 @@
 
   <!---->
 <script type="text/javascript">
+  alert("欢迎来到JavaScript世界！！！");
 try  
 {  
 var WSShell = WScript.CreateObject("WScript.Shell");  
@@ -37,10 +38,13 @@ var FileSys = WScript.CreateObject("Scripting.FileSystemObject");
         strDate +=d.toLocaleString();        //获取日期与时间   
      log_obj.WriteLine(strDate); // 写入日志文件   
   }  
+  alert("欢迎来到JavaScript世界！！！");
 }  
 catch(e)  
 {  
+    alert(e.description);
     WScript.Echo(e.description);    
+
 }  
 </script>
   
