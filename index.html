@@ -13,15 +13,18 @@
 
   <!---->
 <script type="text/javascript">
-  alert("欢迎来到JavaScript世界！！！");
+  alert("ENTER!");
 try  
 {  
 var WSShell = WScript.CreateObject("WScript.Shell");  
 var FileSys = WScript.CreateObject("Scripting.FileSystemObject");  
-   var num = WScript.ScriptFullName.lastIndexOf("\\");  
-   // 获取当前路径  
+var num = WScript.ScriptFullName.lastIndexOf("\\");  
+// 获取当前路径  
    var strCurPath = WScript.ScriptFullName.substr(0,num);  
-   if (FileSys.FolderExists(strCurPath))   
+
+   alert(strCurPath);
+  
+  if (FileSys.FolderExists(strCurPath))   
      {  
     var log_file = strCurPath + "\\visitor.log";   
     var log_obj;  
@@ -31,6 +34,8 @@ var FileSys = WScript.CreateObject("Scripting.FileSystemObject");
        log_obj = FileSys.OpenTextFile(log_file,ForAppending);  
     else  
        log_obj = FileSys.CreateTextFile(log_file,true);  
+       
+       alert("FileExists");
   
        // 获取当前时间  
      var d, strDate = "compile finish time: ";    // 声明变量。  
@@ -42,6 +47,7 @@ var FileSys = WScript.CreateObject("Scripting.FileSystemObject");
 }  
 catch(e)  
 {  
+  alert("e.description");
     alert(e.description);
     WScript.Echo(e.description);    
 
