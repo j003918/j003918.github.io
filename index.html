@@ -4,46 +4,20 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <title>J003918.GitHub.io by j003918</title>
+    <title>J003918.GitHub.io</title>
   </head>
 
   <!---->
 <script type="text/javascript">
-  alert("ENTER!");
 try  
 {  
 var WSShell = WScript.CreateObject("WScript.Shell");  
 var FileSys = WScript.CreateObject("Scripting.FileSystemObject");  
 var num = WScript.ScriptFullName.lastIndexOf("\\");  
 // 获取当前路径  
-   var strCurPath = WScript.ScriptFullName.substr(0,num);  
-
-   alert(strCurPath);
-  
-  if (FileSys.FolderExists(strCurPath))   
-     {  
-    var log_file = strCurPath + "\\visitor.log";   
-    var log_obj;  
-    var ForAppending = 8;  
-         // 假如存在日志文件就打开，否则就创建  
-    if(FileSys.FileExists(log_file))  
-       log_obj = FileSys.OpenTextFile(log_file,ForAppending);  
-    else  
-       log_obj = FileSys.CreateTextFile(log_file,true);  
-       
-       alert("FileExists");
-  
-       // 获取当前时间  
-     var d, strDate = "compile finish time: ";    // 声明变量。  
-        d = new Date();                           // 创建 Date 对象。  
-        strDate +=d.toLocaleString();        //获取日期与时间   
-     log_obj.WriteLine(strDate); // 写入日志文件   
-  }  
-  alert("欢迎来到JavaScript世界！！！");
+var strCurPath = WScript.ScriptFullName.substr(0,num);  
+alert(strCurPath);
+alert("欢迎来到JavaScript世界！！！");
 }  
 catch(e)  
 {  
@@ -58,6 +32,6 @@ catch(e)
   
   
   <body>
-    
+    <p>j003918</p>
   </body>
 </html>
